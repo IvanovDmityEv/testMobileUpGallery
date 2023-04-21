@@ -13,9 +13,11 @@
 		2C49102929F2713B008B5F71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C49102729F2713B008B5F71 /* Main.storyboard */; };
 		2C49102B29F2713C008B5F71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C49102A29F2713C008B5F71 /* Assets.xcassets */; };
 		2C49102E29F2713C008B5F71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C49102C29F2713C008B5F71 /* LaunchScreen.storyboard */; };
+		BE76C43446A07B91BB762F91 /* Pods_testMobileUpGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9B489E7515D989B82B09E8 /* Pods_testMobileUpGallery.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A9B489E7515D989B82B09E8 /* Pods_testMobileUpGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testMobileUpGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C49101E29F2713B008B5F71 /* testMobileUpGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testMobileUpGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C49102129F2713B008B5F71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C49102329F2713B008B5F71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		2C49102A29F2713C008B5F71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C49102D29F2713C008B5F71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C49102F29F2713C008B5F71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BE86958053DCE12F5300122 /* Pods-testMobileUpGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testMobileUpGallery.debug.xcconfig"; path = "Target Support Files/Pods-testMobileUpGallery/Pods-testMobileUpGallery.debug.xcconfig"; sourceTree = "<group>"; };
+		CEF5A9BE30BEA32A5F1F963A /* Pods-testMobileUpGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testMobileUpGallery.release.xcconfig"; path = "Target Support Files/Pods-testMobileUpGallery/Pods-testMobileUpGallery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE76C43446A07B91BB762F91 /* Pods_testMobileUpGallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				2C49102029F2713B008B5F71 /* testMobileUpGallery */,
 				2C49101F29F2713B008B5F71 /* Products */,
+				2C49103B29F2C4BB008B5F71 /* Frameworks */,
+				F4D116AB2CD7C8D43B22B1E2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = testMobileUpGallery;
 			sourceTree = "<group>";
 		};
+		2C49103B29F2C4BB008B5F71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A9B489E7515D989B82B09E8 /* Pods_testMobileUpGallery.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4D116AB2CD7C8D43B22B1E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BE86958053DCE12F5300122 /* Pods-testMobileUpGallery.debug.xcconfig */,
+				CEF5A9BE30BEA32A5F1F963A /* Pods-testMobileUpGallery.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C49103229F2713C008B5F71 /* Build configuration list for PBXNativeTarget "testMobileUpGallery" */;
 			buildPhases = (
+				9AD06847B531FC1B95B4646C /* [CP] Check Pods Manifest.lock */,
 				2C49101A29F2713B008B5F71 /* Sources */,
 				2C49101B29F2713B008B5F71 /* Frameworks */,
 				2C49101C29F2713B008B5F71 /* Resources */,
+				E8C9526E86DF5977A8BEAF54 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9AD06847B531FC1B95B4646C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-testMobileUpGallery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8C9526E86DF5977A8BEAF54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testMobileUpGallery/Pods-testMobileUpGallery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testMobileUpGallery/Pods-testMobileUpGallery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testMobileUpGallery/Pods-testMobileUpGallery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C49101A29F2713B008B5F71 /* Sources */ = {
@@ -282,12 +350,14 @@
 		};
 		2C49103329F2713C008B5F71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BE86958053DCE12F5300122 /* Pods-testMobileUpGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XLXB9YQ52L;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testMobileUpGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -299,17 +369,25 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/VKSdkFramework.framework",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ivanov.testMobileUpGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		2C49103429F2713C008B5F71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEF5A9BE30BEA32A5F1F963A /* Pods-testMobileUpGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -327,12 +405,19 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/VKSdkFramework.framework",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ivanov.testMobileUpGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
