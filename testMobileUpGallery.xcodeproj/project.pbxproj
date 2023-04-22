@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		2C49102229F2713B008B5F71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49102129F2713B008B5F71 /* AppDelegate.swift */; };
 		2C49102429F2713B008B5F71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49102329F2713B008B5F71 /* SceneDelegate.swift */; };
-		2C49102629F2713B008B5F71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49102529F2713B008B5F71 /* ViewController.swift */; };
-		2C49102929F2713B008B5F71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C49102729F2713B008B5F71 /* Main.storyboard */; };
+		2C49102629F2713B008B5F71 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49102529F2713B008B5F71 /* AuthViewController.swift */; };
 		2C49102B29F2713C008B5F71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C49102A29F2713C008B5F71 /* Assets.xcassets */; };
 		2C49102E29F2713C008B5F71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C49102C29F2713C008B5F71 /* LaunchScreen.storyboard */; };
+		2C49104429F3D671008B5F71 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49104329F3D671008B5F71 /* AuthService.swift */; };
+		2C49104729F3DBC3008B5F71 /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C49104629F3DBC3008B5F71 /* AuthViewController.storyboard */; };
+		2C49104929F422DF008B5F71 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49104829F422DF008B5F71 /* GalleryViewController.swift */; };
 		BE76C43446A07B91BB762F91 /* Pods_testMobileUpGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9B489E7515D989B82B09E8 /* Pods_testMobileUpGallery.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +23,13 @@
 		2C49101E29F2713B008B5F71 /* testMobileUpGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testMobileUpGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C49102129F2713B008B5F71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C49102329F2713B008B5F71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C49102529F2713B008B5F71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C49102829F2713B008B5F71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C49102529F2713B008B5F71 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		2C49102A29F2713C008B5F71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C49102D29F2713C008B5F71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C49102F29F2713C008B5F71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C49104329F3D671008B5F71 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		2C49104629F3DBC3008B5F71 /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
+		2C49104829F422DF008B5F71 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		5BE86958053DCE12F5300122 /* Pods-testMobileUpGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testMobileUpGallery.debug.xcconfig"; path = "Target Support Files/Pods-testMobileUpGallery/Pods-testMobileUpGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		CEF5A9BE30BEA32A5F1F963A /* Pods-testMobileUpGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testMobileUpGallery.release.xcconfig"; path = "Target Support Files/Pods-testMobileUpGallery/Pods-testMobileUpGallery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +69,10 @@
 			children = (
 				2C49102129F2713B008B5F71 /* AppDelegate.swift */,
 				2C49102329F2713B008B5F71 /* SceneDelegate.swift */,
-				2C49102529F2713B008B5F71 /* ViewController.swift */,
-				2C49102729F2713B008B5F71 /* Main.storyboard */,
+				2C49102529F2713B008B5F71 /* AuthViewController.swift */,
+				2C49104629F3DBC3008B5F71 /* AuthViewController.storyboard */,
+				2C49104829F422DF008B5F71 /* GalleryViewController.swift */,
+				2C49104529F3D683008B5F71 /* Services */,
 				2C49102A29F2713C008B5F71 /* Assets.xcassets */,
 				2C49102C29F2713C008B5F71 /* LaunchScreen.storyboard */,
 				2C49102F29F2713C008B5F71 /* Info.plist */,
@@ -80,6 +86,14 @@
 				2A9B489E7515D989B82B09E8 /* Pods_testMobileUpGallery.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C49104529F3D683008B5F71 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2C49104329F3D671008B5F71 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F4D116AB2CD7C8D43B22B1E2 /* Pods */ = {
@@ -152,8 +166,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C49102E29F2713C008B5F71 /* LaunchScreen.storyboard in Resources */,
+				2C49104729F3DBC3008B5F71 /* AuthViewController.storyboard in Resources */,
 				2C49102B29F2713C008B5F71 /* Assets.xcassets in Resources */,
-				2C49102929F2713B008B5F71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,23 +220,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C49102629F2713B008B5F71 /* ViewController.swift in Sources */,
+				2C49102629F2713B008B5F71 /* AuthViewController.swift in Sources */,
 				2C49102229F2713B008B5F71 /* AppDelegate.swift in Sources */,
+				2C49104929F422DF008B5F71 /* GalleryViewController.swift in Sources */,
 				2C49102429F2713B008B5F71 /* SceneDelegate.swift in Sources */,
+				2C49104429F3D671008B5F71 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2C49102729F2713B008B5F71 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C49102829F2713B008B5F71 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2C49102C29F2713C008B5F71 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,17 +370,13 @@
 				INFOPLIST_FILE = testMobileUpGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS/VKSdkFramework.framework",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ivanov.testMobileUpGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -398,17 +402,13 @@
 				INFOPLIST_FILE = testMobileUpGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS/VKSdkFramework.framework",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ivanov.testMobileUpGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
