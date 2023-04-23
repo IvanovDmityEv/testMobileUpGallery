@@ -78,6 +78,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthServiceDelegate {
     
     func authServiceSignIn() {
         print(#function)
+        let galleryVC = UIStoryboard(name: "GalleryViewController", bundle: nil).instantiateInitialViewController() as? GalleryViewController
+        guard let galleryVC = galleryVC else { return }
+        let navigationVC = UINavigationController(rootViewController: galleryVC)
+        window?.rootViewController = navigationVC
     }
     
     func authServiceDidSignInFail() {
