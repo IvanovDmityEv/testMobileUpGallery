@@ -6,14 +6,12 @@
 //
 
 import UIKit
+import VK_ios_sdk
 
 class GalleryViewController: UIViewController {
     
-//    private var networkService: Networking = NetworkService()
-//    let params = ["owner_id":"-128666765", "album_id":"266310117"]
     private var fetcher: DataFetcher = NetworkDataFetcher(networking: NetworkService())
-    
-//    -266310117
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,22 +19,35 @@ class GalleryViewController: UIViewController {
         fetcher.getFeed { feedResponse in
             guard let feedResponse = feedResponse else { return }
             print(feedResponse)
+            
+            self.addSignOutButton()
         }
+    }
+    
+    func addSignOutButton() {
+        let signOutButton = UIBarButtonItem(title: "Выход", style: .plain, target: self, action: #selector(actionSignOutButton))
+        navigationItem.rightBarButtonItem = signOutButton
+        navigationController?.navigationBar.tintColor = .black
+    }
+    
+    @objc func actionSignOutButton() {
+        print("выход")
+    }
+}
 
-//        networkService.request(path: API.photos, params: params) { data, error in
-//            if error != nil {
-//                print("Error recived requesting data")
-//            }
-//
-//            let decoder = JSONDecoder()
-////            decoder.keyDecodingStrategy = .convertFromSnakeCase
-//
-//            guard let data = data else { return }
-////            let json = try? JSONSerialization.jsonObject(with: data)
-////            print(json)
-//
-//            let response = try? decoder.decode(FeedResponseWrapped.self, from: data)
-//            print(response)
-//        }
+extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellGallery", for: indexPath) as! CellGallery
+        let cellSize = view.bounds.width/2-1
+        cell.heightAnchor.constraint(equalToConstant: cellSize).isActive = true
+        cell.widthAnchor.constraint(equalToConstant: cellSize).isActive = true
+        
+        cell.backgroundColor = .systemGray5
+        
+        return cell
     }
 }

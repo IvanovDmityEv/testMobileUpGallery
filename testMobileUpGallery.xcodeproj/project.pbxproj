@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C28033B29F6D4D3004BDB1D /* FeedResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C28033A29F6D4D3004BDB1D /* FeedResponce.swift */; };
 		2C28033E29F6DA2B004BDB1D /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C28033D29F6DA2B004BDB1D /* NetworkDataFetcher.swift */; };
+		2C28034029F6F14B004BDB1D /* CellGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C28033F29F6F14B004BDB1D /* CellGallery.swift */; };
 		2C49102229F2713B008B5F71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49102129F2713B008B5F71 /* AppDelegate.swift */; };
 		2C49102429F2713B008B5F71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49102329F2713B008B5F71 /* SceneDelegate.swift */; };
 		2C49102629F2713B008B5F71 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49102529F2713B008B5F71 /* AuthViewController.swift */; };
@@ -27,6 +28,7 @@
 		2A9B489E7515D989B82B09E8 /* Pods_testMobileUpGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testMobileUpGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C28033A29F6D4D3004BDB1D /* FeedResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponce.swift; sourceTree = "<group>"; };
 		2C28033D29F6DA2B004BDB1D /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		2C28033F29F6F14B004BDB1D /* CellGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellGallery.swift; sourceTree = "<group>"; };
 		2C49101E29F2713B008B5F71 /* testMobileUpGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testMobileUpGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C49102129F2713B008B5F71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C49102329F2713B008B5F71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				2C49104829F422DF008B5F71 /* GalleryViewController.swift */,
 				2C49104A29F423BF008B5F71 /* GalleryViewController.storyboard */,
+				2C28033F29F6F14B004BDB1D /* CellGallery.swift */,
 			);
 			path = GalleryViewController;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				2C49104F29F5635D008B5F71 /* NetworkService.swift in Sources */,
 				2C28033E29F6DA2B004BDB1D /* NetworkDataFetcher.swift in Sources */,
 				2C49104429F3D671008B5F71 /* AuthService.swift in Sources */,
+				2C28034029F6F14B004BDB1D /* CellGallery.swift in Sources */,
 				2C49105129F56560008B5F71 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
