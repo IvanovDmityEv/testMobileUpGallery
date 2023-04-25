@@ -57,31 +57,59 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cellSize = view.bounds.width/2-1
         cell.heightAnchor.constraint(equalToConstant: cellSize).isActive = true
         cell.widthAnchor.constraint(equalToConstant: cellSize).isActive = true
+        
         let item = feedResponse?.items[indexPath.row]
-        let date = item?.date
-//        let size = item?.sizes[indexPath.row]
-        let sizes = item?.sizes
-        let sizeTypeZ = sizes?.filter{ $0.type == "z"}
-      
-        print("pum0 - \(sizeTypeZ)")
-        
-        let url = sizeTypeZ?.first?.url
-            print("pum1\(url)")
-            DispatchQueue.global().async {
-                let imageUrl = URL(string: url!)
-                print("pum2\(imageUrl)")
-                let imageData = try? Data(contentsOf: imageUrl!)
-                DispatchQueue.main.async {
-                    cell.imageCellGallery.image = UIImage(data: imageData!)
-//                    self.galleryCollectionView.reloadData()
-                }
-            }
 
-        
-        
-        
-        cell.backgroundColor = .systemGray5
-        
+        let url = getUrlString(item: item)
+        getImage(urlString: url) { imageData in
+            DispatchQueue.main.async {
+                cell.imageCellGallery.image = UIImage(data: imageData!)
+            }
+        }
         return cell
+    }
+    
+
+    
+    func getUrlString (item: FeedItem?) -> String? {
+        let sizes = item?.sizes
+        guard let sizes = sizes else {return nil}
+        let sizeTypeZ = sizes.filter{ $0.type == "z"}
+        let urlString = sizeTypeZ.first?.url
+        return urlString
+    }
+    
+    func getImage (urlString: String?, completionHandler: @escaping (Data?)->()) {
+        guard let urlString = urlString else { return }
+        DispatchQueue.global().async {
+            guard let imageUrl = URL(string: urlString) else {return}
+            print("pum2\(imageUrl)")
+            guard let imageData = try? Data(contentsOf: imageUrl) else {return}
+            completionHandler(imageData)
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photoVC = PhotoViewController()
+        let item = feedResponse?.items[indexPath.row]
+        let urlString = getUrlString(item: item)
+
+        getImage(urlString: urlString) { imageData in
+                photoVC.image = UIImage(data: imageData!) ?? UIImage()
+                print("SELECTED IMAGE \(photoVC.image)")
+            if photoVC.image != UIImage() {
+                DispatchQueue.main.async {
+                    self.navigationController?.pushViewController(photoVC, animated: true)
+                }
+                
+            }
+        }
+        
+//        DispatchQueue.main.async {
+//
+//                   }
+
+        photoVC.dateUnix = item?.date
+
     }
 }
