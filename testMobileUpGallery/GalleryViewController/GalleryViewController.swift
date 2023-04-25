@@ -10,8 +10,11 @@ import VK_ios_sdk
 
 class GalleryViewController: UIViewController {
     
+    @IBOutlet weak var galleryCollectionView: UICollectionView!
+    
     private var fetcher: DataFetcher = NetworkDataFetcher(networking: NetworkService())
-
+    
+    private var feedResponse: FeedResponse?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +23,16 @@ class GalleryViewController: UIViewController {
             guard let feedResponse = feedResponse else { return }
             print(feedResponse)
             
-            self.addSignOutButton()
+            self.updateColectionView(feedResponse: feedResponse)
+        }
+        
+        self.addSignOutButton()
+    }
+    
+    func updateColectionView(feedResponse: FeedResponse) {
+        self.feedResponse = feedResponse
+        DispatchQueue.main.async {
+            self.galleryCollectionView.reloadData()
         }
     }
     
@@ -37,7 +49,7 @@ class GalleryViewController: UIViewController {
 
 extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        feedResponse?.items.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -45,6 +57,28 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cellSize = view.bounds.width/2-1
         cell.heightAnchor.constraint(equalToConstant: cellSize).isActive = true
         cell.widthAnchor.constraint(equalToConstant: cellSize).isActive = true
+        let item = feedResponse?.items[indexPath.row]
+        let date = item?.date
+//        let size = item?.sizes[indexPath.row]
+        let sizes = item?.sizes
+        let sizeTypeZ = sizes?.filter{ $0.type == "z"}
+      
+        print("pum0 - \(sizeTypeZ)")
+        
+        let url = sizeTypeZ?.first?.url
+            print("pum1\(url)")
+            DispatchQueue.global().async {
+                let imageUrl = URL(string: url!)
+                print("pum2\(imageUrl)")
+                let imageData = try? Data(contentsOf: imageUrl!)
+                DispatchQueue.main.async {
+                    cell.imageCellGallery.image = UIImage(data: imageData!)
+//                    self.galleryCollectionView.reloadData()
+                }
+            }
+
+        
+        
         
         cell.backgroundColor = .systemGray5
         
