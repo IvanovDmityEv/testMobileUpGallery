@@ -22,15 +22,16 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
         
         authService = SceneDelegate.shared().authServise
+
+    }
+
+
+    @IBAction func signInAction(_ sender: UIButton) {
         
         if Reachability.isConnectedToNetwork() == false {
             let alert = AlertController()
             alert.showAlertControlle(view: self, title: "There isn't internet connection")
         }
-    }
-
-
-    @IBAction func signInAction(_ sender: UIButton) {
         
         authService.wakeUpSession()
     }
