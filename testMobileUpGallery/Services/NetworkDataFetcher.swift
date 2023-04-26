@@ -38,5 +38,4 @@ struct NetworkDataFetcher: DataFetcher {
         guard let data = from, let response = try? decoder.decode(type.self, from: data) else { return nil}
         return response
     }
-    
 }

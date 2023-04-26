@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import VK_ios_sdk
 
 class PhotoViewController: UIViewController {
 
@@ -16,8 +17,7 @@ class PhotoViewController: UIViewController {
             guard let dateUnix = dateUnix else { return }
             let date1 = Date(timeIntervalSince1970: TimeInterval(dateUnix))
                 let dateFormatter = DateFormatter()
-//                dateFormatter.timeStyle = DateFormatter.Style.medium //Set time style
-                dateFormatter.dateStyle = DateFormatter.Style.long //Set date style
+                dateFormatter.dateStyle = DateFormatter.Style.long
                 dateFormatter.timeZone = .current
                 date = dateFormatter.string(from: date1)
         }
@@ -30,12 +30,6 @@ class PhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-
-            print("IMAGE \(self.image)")
-//        imageView?.image = UIImage(systemName: "chevron.backward")
-//        print("IMAGE VIEW \(imageView?.image)")
-        
-
         addButtonItems()
         addImageView()
     }
@@ -49,22 +43,27 @@ class PhotoViewController: UIViewController {
         navigationItem.rightBarButtonItem = shareMenuButton
         navigationController?.navigationBar.tintColor = .black
         guard let date = date else { return }
-        print("DATA \(date)")
         navigationItem.title = date
     }
     
     @objc func shareMenuButton() {
-        print("shareMenu")
+        let items: [Any] = [image]
+        let avc = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        
+        avc.completionWithItemsHandler = {_, bool, _, _ in
+            if bool {
+                let alert = AlertController()
+                alert.showAlertControlle(view: self, title: "Изображение сохранено")
+            }
+        }
+        self.present(avc, animated: true)
     }
     
 
     func addImageView() {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: (Int(view.bounds.height)/4), width: Int(view.bounds.width), height: Int(view.bounds.width)))
-        imageView.contentMode = .scaleAspectFit
-        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: Int(view.bounds.width), height: Int(view.bounds.height)))
+        imageView.contentMode = .scaleAspectFit  
         view.addSubview(imageView)
         imageView.image = image
-        
     }
-
 }

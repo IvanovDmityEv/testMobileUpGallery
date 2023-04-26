@@ -87,6 +87,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthServiceDelegate {
     
     func authServiceDidSignInFail() {
         print(#function)
+        let alert = AlertController()
+        alert.showAlertControlle(view: window!.rootViewController!, title: "Failed sign in")
     }
 }
 

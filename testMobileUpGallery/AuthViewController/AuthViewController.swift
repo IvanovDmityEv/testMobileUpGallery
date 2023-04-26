@@ -11,6 +11,7 @@ class AuthViewController: UIViewController {
     
     private var authService: AuthService!
 
+
     @IBOutlet weak var signInButton: UIButton! {
         didSet {
             signInButton.layer.cornerRadius = 12
@@ -21,6 +22,11 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
         
         authService = SceneDelegate.shared().authServise
+        
+        if Reachability.isConnectedToNetwork() == false {
+            let alert = AlertController()
+            alert.showAlertControlle(view: self, title: "There isn't internet connection")
+        }
     }
 
 

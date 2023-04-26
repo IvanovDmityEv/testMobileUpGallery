@@ -25,9 +25,6 @@ final class NetworkService: Networking {
 
         var allParams = params
         allParams["access_token"] = token
-        
-        
-//        allParams["access_token"] = "3f94899d3f94899d3f94899d1d3c87260533f943f94899d5bd6a7decb13f3b4fd3f322d"
         allParams["v"] = API.version
    
         let url = self.url(from: path, params: allParams)
@@ -55,7 +52,5 @@ final class NetworkService: Networking {
         component.queryItems = params.map { URLQueryItem(name: $0, value: $1)}
 
         return component.url!
-      
     }
-    
 }

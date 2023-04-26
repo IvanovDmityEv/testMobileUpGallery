@@ -23,6 +23,8 @@
 		2C49104F29F5635D008B5F71 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49104E29F5635D008B5F71 /* NetworkService.swift */; };
 		2C49105129F56560008B5F71 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49105029F56560008B5F71 /* API.swift */; };
 		2CB0923D29F81F3C00CA2831 /* PhotoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB0923C29F81F3C00CA2831 /* PhotoViewController.storyboard */; };
+		2CB0923F29F9190700CA2831 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0923E29F9190700CA2831 /* AlertController.swift */; };
+		2CB0924129F9289300CA2831 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0924029F9289300CA2831 /* Reachability.swift */; };
 		BE76C43446A07B91BB762F91 /* Pods_testMobileUpGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9B489E7515D989B82B09E8 /* Pods_testMobileUpGallery.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		2C49104E29F5635D008B5F71 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2C49105029F56560008B5F71 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		2CB0923C29F81F3C00CA2831 /* PhotoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoViewController.storyboard; sourceTree = "<group>"; };
+		2CB0923E29F9190700CA2831 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		2CB0924029F9289300CA2831 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		5BE86958053DCE12F5300122 /* Pods-testMobileUpGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testMobileUpGallery.debug.xcconfig"; path = "Target Support Files/Pods-testMobileUpGallery/Pods-testMobileUpGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		CEF5A9BE30BEA32A5F1F963A /* Pods-testMobileUpGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testMobileUpGallery.release.xcconfig"; path = "Target Support Files/Pods-testMobileUpGallery/Pods-testMobileUpGallery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +133,8 @@
 				2C49104E29F5635D008B5F71 /* NetworkService.swift */,
 				2C49105029F56560008B5F71 /* API.swift */,
 				2C28033D29F6DA2B004BDB1D /* NetworkDataFetcher.swift */,
+				2CB0923E29F9190700CA2831 /* AlertController.swift */,
+				2CB0924029F9289300CA2831 /* Reachability.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 				2C49102629F2713B008B5F71 /* AuthViewController.swift in Sources */,
 				2C49102229F2713B008B5F71 /* AppDelegate.swift in Sources */,
 				2C49104929F422DF008B5F71 /* GalleryViewController.swift in Sources */,
+				2CB0923F29F9190700CA2831 /* AlertController.swift in Sources */,
 				2C49102429F2713B008B5F71 /* SceneDelegate.swift in Sources */,
 				2C49104F29F5635D008B5F71 /* NetworkService.swift in Sources */,
 				2C28033E29F6DA2B004BDB1D /* NetworkDataFetcher.swift in Sources */,
@@ -289,6 +296,7 @@
 				2C28034029F6F14B004BDB1D /* CellGallery.swift in Sources */,
 				2C49105129F56560008B5F71 /* API.swift in Sources */,
 				2C28034529F7DEED004BDB1D /* PhotoViewController.swift in Sources */,
+				2CB0924129F9289300CA2831 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

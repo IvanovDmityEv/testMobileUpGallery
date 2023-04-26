@@ -43,7 +43,7 @@ class GalleryViewController: UIViewController {
     }
     
     @objc func actionSignOutButton() {
-        print("выход")
+        VKSdk.forceLogout()
     }
 }
 
@@ -84,8 +84,15 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
         DispatchQueue.global().async {
             guard let imageUrl = URL(string: urlString) else {return}
             print("pum2\(imageUrl)")
-            guard let imageData = try? Data(contentsOf: imageUrl) else {return}
-            completionHandler(imageData)
+            
+            do {
+                let imageData = try Data(contentsOf: imageUrl)
+                completionHandler(imageData)
+            } catch let error {
+                let alert = AlertController()
+                alert.showAlertControlle(view: self, title: "Data is not found")
+                print(error.localizedDescription)
+            }
         }
     }
 
@@ -104,12 +111,6 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
                 
             }
         }
-        
-//        DispatchQueue.main.async {
-//
-//                   }
-
         photoVC.dateUnix = item?.date
-
     }
 }
